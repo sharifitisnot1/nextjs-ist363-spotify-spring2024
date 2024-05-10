@@ -1,40 +1,42 @@
-.footer {
-  background-color: #000; // Dark background
-  color: #fff; // White text color
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  select {
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 10px;
-    margin-right: 20px;
-  }
-
-  .latestRelease {
+@use "../../../sass/abstracts/vars";
+@use "../../../sass/abstracts/mixins";
+@include mixins.breakpoint("md") {
+  .footer {
+    background-color: #000; // Dark background
+    color: #fff; // White text color
+    padding: 30px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 20px;
 
-    .albumCover {
-      width: 60px;
-      height: 60px;
-      margin-right: 10px;
+    select {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 40px;
+      margin-right: 20px;
+      background-color: vars.$color__brand;
+      color: black;
+      font-weight: bolder;
     }
 
-    .albumInfo {
-      color: #fff;
+    .latestRelease {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      .albumInfo {
+        color: #fff;
+      }
     }
   }
+  .videoContainer {
+    width: 100%;
+    margin-top: 20px;
+  }
 
-  .artistButton {
-    background-color: #0f0; // Bright green color
-    color: #000; // Black text color
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+  .videoFrame {
+    width: 100%;
+    height: 300px; // Adjust this value based on your layout needs
   }
 }
