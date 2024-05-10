@@ -1,6 +1,40 @@
 .footer {
- background-color: gray;
- padding-top: 1rem;
- padding-bottom: 1rem;
- text-align: center;
+  background-color: #000; // Dark background
+  color: #fff; // White text color
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  select {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  .latestRelease {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    .albumCover {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .albumInfo {
+      color: #fff;
+    }
+  }
+
+  .artistButton {
+    background-color: #0f0; // Bright green color
+    color: #000; // Black text color
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
 }
