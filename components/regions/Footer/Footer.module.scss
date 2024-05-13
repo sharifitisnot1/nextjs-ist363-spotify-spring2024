@@ -19,24 +19,23 @@
       color: black;
       font-weight: bolder;
     }
-
-    .latestRelease {
-      display: flex;
-      align-items: center;
-      margin-right: 20px;
-
-      .albumInfo {
-        color: #fff;
-      }
-    }
   }
   .videoContainer {
     width: 100%;
     margin-top: 20px;
+    border-radius: 10px;
+  }
+  .selectedArtist {
+    background-color: vars.$color__brand;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
   }
 
   .videoFrame {
     width: 100%;
-    height: 300px; // Adjust this value based on your layout needs
+    height: 400px; // Adjust this value based on your layout needs
+    border-radius: 10px;
   }
 }

@@ -1,79 +1,79 @@
 "use client";
 
-import styles from "./Footer.module.scss";
-
 import React, { useState } from "react";
+
+import styles from "./Footer.module.scss";
 
 const artists = [
   {
-    name: "Taylor Swift",
-    spotify_id: "06HL4z0CvFAxyc27GXpf02",
+    name: "Kendrick Lamar",
+    spotify_id: "2YZyLoL8N0Wb9xBt1NhZWg",
     description:
-      "Taylor Swift is an American singer-songwriter known for narrative songs about her personal life.",
-    videoUrl: "https://www.youtube.com/embed/VZTRUy7VxD8",
+      "Kendrick Lamar is an American rapper and songwriter known for his thoughtful and introspective lyrics.",
+    videoUrl: "https://www.youtube.com/embed/T6eK-2OQtew",
   },
   {
-    name: "Beyoncé",
-    spotify_id: "6vWDO969PvNqNYHIOW5v0m",
+    name: "J. Cole",
+    spotify_id: "6l3HvQ5sa6mXTsMTB19rO5",
     description:
-      "Beyoncé is a global icon, known for her powerful vocals and electrifying performances.",
-    videoUrl: "https://www.youtube.com/embed/rwieSVDhz04",
+      "J. Cole is a rapper and record producer known for his narrative-driven songs and profound insights into urban life.",
+    videoUrl: "https://www.youtube.com/embed/WILNIXZr2oc",
   },
   {
-    name: "Ariana Grande",
-    spotify_id: "66CXWjxzNUsdJxJ2JdwvnR",
+    name: "Drake",
+    spotify_id: "3TVXtAsR1Inumwj472S9r4",
     description:
-      "Ariana Grande is a pop and R&B vocalist known for her expansive four-octave vocal range.",
-    videoUrl: "https://www.youtube.com/embed/KU1MOoAb54A",
+      "Drake is a Canadian rapper, singer, and actor, famed for his versatility and emotive style.",
+    videoUrl: "https://www.youtube.com/embed/3HFY0xuHybk",
   },
   {
-    name: "Thelonius Monk",
-    spotify_id: "4PDpGtF16XpqvXxsrFwQnN",
+    name: "Travis Scott",
+    spotify_id: "0Y5tJX1MQlPlqiwlOH1tJY",
     description:
-      "Thelonious Monk was a pivotal figure in the history of jazz and is known for his unique improvisational style.",
-    videoUrl: "https://www.youtube.com/embed/KshrtLXBdl8",
+      "Travis Scott is an American rapper and producer known for his highly energetic and auto-tuned anthems.",
+    videoUrl: "https://www.youtube.com/embed/_EyZUTDAH0U",
   },
   {
-    name: "Dizzy Gillespie",
-    spotify_id: "5RzjqfPS0Bu4bUMkyNNDpn",
+    name: "Nicki Minaj",
+    spotify_id: "0hCNtLu0JehylgoiP8L4Gh",
     description:
-      "Dizzy Gillespie was an American jazz trumpeter, bandleader, and composer, and one of the pioneers of bebop.",
-    videoUrl: "https://www.youtube.com/embed/09BB1pci8_o",
+      "Nicki Minaj is a Trinidadian-American rapper known for her animated flow and alter egos.",
+    videoUrl: "https://www.youtube.com/embed/rV7zBXq5JsY",
   },
   {
-    name: "Charlie Parker",
-    spotify_id: "4Ww5mwS7BWYjoZTUIrMHfC",
+    name: "Cardi B",
+    spotify_id: "4kYSro6naA4h99UJvo89HB",
     description:
-      "Charlie Parker was a highly influential soloist and leading figure in the development of bebop.",
-    videoUrl: "https://www.youtube.com/embed/KXP84ijiLbg",
+      "Cardi B is an American rapper recognized for her aggressive flow and candid lyrics.",
+    videoUrl: "https://www.youtube.com/embed/xTlNMmZKwpA",
   },
   {
-    name: "Sonny Rollins",
-    spotify_id: "1VEzN9lxvG6KPR3QQGsebR",
+    name: "Migos",
+    spotify_id: "6oMuImdp5ZcFhWP0ESe6mG",
     description:
-      "Sonny Rollins is an American jazz tenor saxophonist who is widely recognized as one of the most important and influential jazz musicians.",
-    videoUrl: "https://www.youtube.com/embed/cneBpjwfxhg",
+      "Migos, an American hip hop trio, is known for their sharp hooks and ad-libs.",
+    videoUrl: "https://www.youtube.com/embed/S-sJp1FfG7Q",
   },
   {
-    name: "Dexter Gordon",
-    spotify_id: "3NUsiT2JSyaWAnWaXxDzhQ",
+    name: "Snoop Dogg",
+    spotify_id: "7hJcb9fa4alzcOq3EaNPoG",
     description:
-      "Dexter Gordon was a major figure in the bebop and hard bop movements of jazz.",
-    videoUrl: "https://www.youtube.com/embed/EtmKAy9P1kY",
+      "Snoop Dogg is an iconic American rapper famous for his laid-back rapping and his deep connection to the West Coast vibe.",
+    videoUrl: "https://www.youtube.com/embed/GtUVQei3nX4",
   },
   {
-    name: "Kenny Burrell",
-    spotify_id: "1sdyFmN4bVOcuFDpTVsxBB",
+    name: "Lil Wayne",
+    spotify_id: "55Aa2cqylxrFIXC767Z865",
     description:
-      "Kenny Burrell is known for his warm tone and soulful approach to the jazz guitar.",
-    videoUrl: "https://www.youtube.com/embed/q2DbH1PIWxU",
+      "Lil Wayne is an American rapper known for his prolific output and clever wordplay.",
+    videoUrl: "https://www.youtube.com/embed/c7tOAGY59uQ",
   },
   {
-    name: "Wes Montgomery",
-    spotify_id: "03YhcM6fxypfwckPCQV8pQ",
+    name: "Jay-Z",
+    spotify_id: "3nFkdlSjzX9mRTtwJOzDYB",
     description:
-      "Wes Montgomery was one of the most influential jazz guitarists, known for his distinctive plucking style.",
-    videoUrl: "https://www.youtube.com/embed/IFBeo0cGu7c",
+      "Jay-Z is an American rapper and entrepreneur, one of the most influential figures in hip hop.",
+    videoUrl: "https://www.youtube.com/embed/BoEKWtgJQAU",
   },
 ];
 
@@ -112,11 +112,13 @@ const Footer = () => {
           ></iframe>
         </div>
       )}
-      <p>
-        {selectedArtist
-          ? selectedArtist.description
-          : "Please select an artist from the dropdown."}
-      </p>
+      <div className={styles.selectedArtist}>
+        <p>
+          {selectedArtist
+            ? selectedArtist.description
+            : "Please select an artist from the dropdown."}
+        </p>
+      </div>
     </footer>
   );
 };
