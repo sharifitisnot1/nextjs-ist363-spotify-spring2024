@@ -3,50 +3,57 @@ import { getAccessToken } from "../../../lib/spotify";
 export async function GET() {
   const token = await getAccessToken();
 
+  //const taylorSwift = "06HL4z0CvFAxyc27GXpf02";
+
   const artists = [
     {
-      name: "Kendrick Lamar",
-      spotify_id: "2YZyLoL8N0Wb9xBt1NhZWg",
+      name: "Taylor Swift",
+      spotify_id: "06HL4z0CvFAxyc27GXpf02",
     },
     {
-      name: "J. Cole",
-      spotify_id: "6l3HvQ5sa6mXTsMTB19rO5",
+      name: "Beyoncé",
+      spotify_id: "6vWDO969PvNqNYHIOW5v0m",
     },
     {
-      name: "Drake",
-      spotify_id: "3TVXtAsR1Inumwj472S9r4",
+      name: "Ariana Grande",
+      spotify_id: "66CXWjxzNUsdJxJ2JdwvnR",
     },
     {
-      name: "Travis Scott",
-      spotify_id: "0Y5tJX1MQlPlqiwlOH1tJY",
+      name: "Thelonius Monk",
+      spotify_id: "4PDpGtF16XpqvXxsrFwQnN",
     },
     {
-      name: "Nicki Minaj",
-      spotify_id: "0hCNtLu0JehylgoiP8L4Gh",
+      name: "Dizzy Gillespie",
+      spotify_id: "5RzjqfPS0Bu4bUMkyNNDpn",
     },
     {
-      name: "Cardi B",
-      spotify_id: "4kYSro6naA4h99UJvo89HB",
+      name: "Charlie Parker",
+      spotify_id: "4Ww5mwS7BWYjoZTUIrMHfC",
     },
     {
-      name: "Migos",
-      spotify_id: "6oMuImdp5ZcFhWP0ESe6mG",
+      name: "Sonny Rollins",
+      spotify_id: "1VEzN9lxvG6KPR3QQGsebR",
     },
     {
-      name: "Snoop Dogg",
-      spotify_id: "7hJcb9fa4alzcOq3EaNPoG",
+      name: "Dexter Gordon",
+      spotify_id: "3NUsiT2JSyaWAnWaXxDzhQ",
     },
     {
-      name: "Lil Wayne",
-      spotify_id: "55Aa2cqylxrFIXC767Z865",
+      name: "Kenny Burrell",
+      spotify_id: "1sdyFmN4bVOcuFDpTVsxBB",
     },
     {
-      name: "Jay-Z",
-      spotify_id: "3nFkdlSjzX9mRTtwJOzDYB",
+      name: "Wes Montgomery",
+      spotify_id: "03YhcM6fxypfwckPCQV8pQ",
     },
   ];
 
+  // Extract the artist IDs
+  // example: ["06HL4z0CvFAxyc27GXpf02", "6vWDO969PvNqNYHIOW5v0m", "66CXWjxzNUsdJxJ2JdwvnR"]
   const artistsIds = artists.map((artist) => artist.spotify_id);
+
+  // Convert the artist IDs to a string
+  // example: "06HL4z0CvFAxyc27GXpf02,6vWDO969PvNqNYHIOW5v0m,66CXWjxzNUsdJxJ2JdwvnR"
   const artistsString = artistsIds.join(",");
 
   const apiResponse = await fetch(
